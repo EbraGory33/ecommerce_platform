@@ -1,0 +1,10 @@
+[
+    {
+        "header":["id","review","created_at","product_id","user_id","rating"],
+        "rows":[
+            ["1","ok","2024-10-14 22:18:31.233733","1","1","4.5"],
+            ["2","Great product! Highly recommended.","2024-10-15 01:29:21.833582","126","1","4.5"],
+            ["3","Great product! Highly recommended.","2024-10-15 01:30:20.031606","126","1","4.5"]
+        ]
+    }
+]

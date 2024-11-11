@@ -1,0 +1,124 @@
+.product-screen {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #2c2c2c;
+    min-height: 100vh;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.product-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.product-name {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.product-stock {
+    font-size: 1.1rem;
+    color: green;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+    background-color: #1762ad;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #444;
+}
+
+/* Reviews Section */
+.product-reviews {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-reviews h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.review {
+    border-top: 1px solid #444;
+    padding: 15px 0;
+    color: #e0e0e0;
+}
+
+.review strong {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+

@@ -1,0 +1,16 @@
+.category-page {
+    color:white;
+    padding: 60px;
+}
+
+.category_product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.category_product-item {
+    flex: 0 1 calc(10% - 20px);
+    margin: 5px;
+    box-sizing: border-box;
+}

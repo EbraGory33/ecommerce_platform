@@ -1,0 +1,91 @@
+.checkout-page {
+    background-color: #3b3c3c;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Checkout Container */
+.checkout-container {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Checkout Items Section */
+.checkout-items {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Payment Section */
+.checkout-payment {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Checkout Item Styling */
+.checkout-item {
+    display: flex;
+    align-items: center;
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 8px;
+    gap: 20px;
+}
+
+.checkout-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.checkout-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Text Styling */
+.checkout-page h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.checkout-page h3 {
+    margin-top: auto;
+    color: #333;
+}
+
+/* Payment Button Styling */
+.checkout-payment button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

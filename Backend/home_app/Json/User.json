@@ -1,0 +1,11 @@
+[
+    {
+        "header":["id","password","last_login","is_superuser","username","last_name","email","is_staff","is_active","date_joined","first_name"],
+        "rows":[
+            ["1","abcd-1234","2024-10-14 15:14:43.330752","1","Site_Admin","","Site_Admin@gmail.com","1","1","2024-10-03 16:40:02",""],
+            ["2","abcd-1234","NULL","0","john_doe","","","0","1","2024-10-03 16:44:42.954181",""],
+            ["3","abcd-1234","NULL","0","jane_doe","","","0","1","2024-10-03 16:46:34.093527",""],
+            ["4","abcd-1234","NULL","0","First_Seller","","","0","1","2024-10-03 16:50:14.030793",""]
+        ]
+    }
+]

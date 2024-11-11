@@ -1,0 +1,32 @@
+[
+    {
+        "header":["id","name","description"],
+        "rows":[
+            ["1","Electronics",""],
+            ["2","Home Appliances",""],
+            ["3","Fashion",""],
+            ["4","Beauty & Personal Care",""],
+            ["5","Health & Fitness",""],
+            ["6","Furniture",""],
+            ["7","Toys & Games",""],
+            ["8","Books",""],
+            ["9","Sports & Outdoor",""],
+            ["10","Pet Supplies",""],
+            ["11","Automotive",""],
+            ["12","Office Supplies",""],
+            ["13","Kitchen & Dining",""],
+            ["14","Gardening",""],
+            ["15","Musical Instruments",""],
+            ["16","Jewelry",""],
+            ["17","Baby Products",""],
+            ["18","Groceries",""],
+            ["19","Footwear",""],
+            ["20","Tools & Home Improvement",""],
+            ["21","Stationery & Craft Supplies",""],
+            ["22","Travel & Luggage",""],
+            ["23","Art & Photography",""],
+            ["24","Entertainment & Media",""],
+            ["25","Party & Event Supplies",""]
+        ]
+    }
+]

@@ -1,0 +1,79 @@
+.n-padding{
+    padding: 14px 18px;
+} 
+
+.content-center{
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.n-nav-icon{
+    height: 50px;
+    width: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.login-logo-text {
+    font-size: 18px; 
+    font-weight: bold;
+    color: #000000;
+}
+
+#main-section{
+    display: block;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#section-inner{
+    border-radius: 8px;
+    padding: 20px 26px;
+}
+
+#header{
+    text-align: center;
+    margin-bottom: 18px;
+}
+.header-text{
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.loginscreen-input-feild{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+}
+
+.login-buttonsstyle{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.link-text {
+    color: #3228a3; /* Link-like color */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline; /* Remove underline initially */
+}
