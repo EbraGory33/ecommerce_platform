@@ -5,7 +5,7 @@ import { useStripe, useElements, PaymentElement } from '@stripe/react-stripe-js'
 import { useNavigate } from 'react-router-dom';
 
 const PaymentForm = ({ total }) => {
-    const {cartInfo} = useSelector((state) => state.cart)
+    const {CartInfo} = useSelector((state) => state.cart)
     const {userInfo} = useSelector((state) => state.user)
     const stripe = useStripe();
     const elements = useElements();
@@ -17,9 +17,11 @@ const PaymentForm = ({ total }) => {
     
     const placeOrder = async (total) =>{
         try{
+            console.log(userInfo)
+            console.log(CartInfo)
             const orderData = {
                 total_price: total,
-                items: cartInfo.map(item => ({
+                items: CartInfo.map(item => ({
                   product_id: item.product_id,
                   quantity: item.quantity,
                   items_price: item.price*item.quantity,
@@ -27,14 +29,16 @@ const PaymentForm = ({ total }) => {
                 ...(userInfo ? { user_id: userInfo.user_id } : { user_id: null }),
             };
             console.log('Order Data being sent:', JSON.stringify(orderData));
-            const response = await CreateOrder(orderData)
-            if (response.ok) {
+            const response = await CreateOrder(JSON.stringify(orderData))
+            console.log(response);
+            console.log(response.data)
+            if (response.status === 200) {
                 console.log('Order was Created:', response);
-                return response;
+                return response.data;
             }
-            if (!response.ok) {
+            else{
                 const errorData = response
-                console.log(errorData.error)
+                console.log(errorData)
                 throw new Error(`Order creation failed: ${errorData.message || response.statusText}`);
             }
 
@@ -49,7 +53,8 @@ const PaymentForm = ({ total }) => {
 
         setIsProcessing(true);
         setErrorMessage(null);
-
+        console.log(userInfo)
+        console.log(CartInfo)
         try {
             const { error: stripeError, paymentIntent } = await stripe.confirmPayment({
                 elements,

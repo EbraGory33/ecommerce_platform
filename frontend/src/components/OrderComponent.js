@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from "react-redux";
 import { FetchOrder } from '../server/endpoints/orders/order_endpoints';
 import './Order.css';
 
 const OrderComponent = ({ id }) => {
+    const { serverUrl } = useSelector((state) => state.app);
     const [order, setOrder] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -11,12 +13,12 @@ const OrderComponent = ({ id }) => {
     useEffect(() => {
         const fetchOrder = async () => {
             try {
-                //const response = await FetchOrder(id);
-                const response = await fetch(`http://127.0.0.1:8000/product/getOrders/${id}`);
-                if (!response.ok) {
+                const response = await FetchOrder(id)
+                if (!response.status === 200) {
                     throw new Error(`Error fetching order: ${response.statusText}`);
                 }
-                const data = await response.json();
+                const data = response.data;
+                console.log(data)
                 setOrder(data);
             } catch (error) {
                 setError(error.message);
@@ -46,7 +48,7 @@ const OrderComponent = ({ id }) => {
                 {order.order_items.map((item, index) => (
                     <li key={index} className="order-item">
                         <img 
-                            src={item.product.image} 
+                            src={serverUrl+item.product.image} 
                             alt={item.product.name} 
                             className="order-image" 
                         />

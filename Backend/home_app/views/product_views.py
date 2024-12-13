@@ -1,4 +1,4 @@
-from home_app.models import User_Profile, Product, Order, OrderItem
+from home_app.models import User_Profile, Product
 from ..serilaizers.product_serializers import *
 from rest_framework import viewsets, status
 from rest_framework.response import Response
@@ -10,10 +10,6 @@ from django.db.models import Avg, Value
 from django.db.models.functions import Coalesce
 from django.db.models import FloatField
 
-import json
-
-
-#Product listing
 @api_view(['POST'])
 @authentication_classes([JWTAuthentication])
 @permission_classes([IsAdminUser])
@@ -160,47 +156,6 @@ def postReview(request):
 
     return Response({'id':review.id}, status=status.HTTP_200_OK)
 
-@api_view(['GET'])
-def getOrder(request, order_id):
-    try:
-        userOrder     = Order.objects.get(id=order_id)
-        serializer    = OrderSerializer(userOrder)
-        return Response(serializer.data, status=200)
-    except Exception as e:
-        return Response({"Error Detail": f"Error:{str(e)}"})
-
-
-@api_view(['POST'])
-def createOrder(request):
-    try:
-        data = json.loads(request.body)
-        user_id=data['user_id']
-        total_price=float(data['total_price'])
-        if user_id != None:
-            user = get_object_or_404(User_Profile, id=user_id)
-
-        if user_id == None:
-            order = Order.objects.create(total_price = total_price)
-        else:
-            order = Order.objects.create(user = user, total_price = total_price)
-        
-        # Loop through the items and create OrderItems
-        for item in data['items']:
-            product = Product.objects.get(id=item['product_id'])
-        
-            item_price = item['items_price']
-            
-            OrderItem.objects.create(
-                order=order,
-                product=product,
-                item_price = item_price,
-                quantity=item['quantity']
-            )
-        return Response({'message': 'Order created successfully!','Order_ID': order.id}, status=200)
-    except Exception as e:
-        return Response({'error': str(e)}, status=400)
-
-
 class AdminProductsViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -208,7 +163,7 @@ class AdminProductsViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAdminUser,]
 
     def get_queryset(self):
-        print(f"Authenticated Profile")  # Debugging step 
+        print(f"Authenticated Profile")
         return Product.objects.all()
     
 class ReviewViewSet(viewsets.ModelViewSet):
@@ -235,15 +190,3 @@ class CategoryViewSet(viewsets.ModelViewSet):
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-
-class OrderViewSet(viewsets.ModelViewSet):
-    queryset = Order.objects.all()
-    serializer_class = OrderSerializer
-
-class OrderItemViewSet(viewsets.ModelViewSet):
-    queryset = OrderItem.objects.all()
-    serializer_class = OrderItemSerializer
-
-class ShippingAddressViewSet(viewsets.ModelViewSet):
-    queryset = ShippingAddress.objects.all()
-    serializer_class = ShippingAddressSerializer

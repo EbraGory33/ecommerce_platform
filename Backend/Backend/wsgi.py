@@ -9,7 +9,11 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 
 import os
 
+import sys
+
 from django.core.wsgi import get_wsgi_application
+
+sys.path.append('/Users/ebrahimgory/ecommerce_platform/Backend/')
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Backend.settings')
 

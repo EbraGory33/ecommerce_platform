@@ -2,10 +2,7 @@
     {
         "header":["id","phone","email","is_register_seller","date_joined","first_name","last_name","user_id"],
         "rows":[
-            ["1","1234567890","ABC@gmail.com","1","2024-10-03 16:44:43","Ebra","Gor","1"],
-            ["2","1234567873","alhg@gmail.com","0","2024-10-03 16:46:34.238274","monet","psahg","3"],
-            ["4","0000000000","FirstSeller@gmail.com","1","2024-10-03 16:50:14","First","Seller","4"],
-            ["5","1234567890","Jhon_doe@gmail.com","1","2024-10-04 15:22:35","John","Doe","2"]
+            ["1","1234567890","ABC@gmail.com","1","2024-10-03 16:44:43","Site","Admin","1"]
         ]
     }
 ]

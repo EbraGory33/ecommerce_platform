@@ -20,8 +20,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.routers import DefaultRouter
 from home_app.views.user_views import UsersViewSet, Profile_UsersViewSet
-from home_app.views.product_views import CategoryViewSet, ProductViewSet, AdminProductsViewSet, OrderViewSet, OrderItemViewSet,  ShippingAddressViewSet, ReviewViewSet
+from home_app.views.product_views import CategoryViewSet, ProductViewSet, AdminProductsViewSet, ReviewViewSet
 from home_app.views.cart_views import CartViewSet, CartItemViewSet
+from home_app.views.order_views import OrderViewSet, OrderItemViewSet, ShippingAddressViewSet
 
 from django.conf import settings  # Import settings
 from django.conf.urls.static import static 
@@ -59,6 +60,7 @@ urlpatterns = [
     path('auth/', include('home_app.urls.user_urls')),  # User-related URLs
     path('product/', include('home_app.urls.product_urls')),  # Product-related URLs
     path('cart/', include('home_app.urls.cart_urls')),  # Cart-related URLs
+    path('order/', include('home_app.urls.order_urls')),
     path('payment/', include('home_app.urls.payment_urls'))
 ]
 

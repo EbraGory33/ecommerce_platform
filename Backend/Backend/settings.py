@@ -24,9 +24,9 @@ from datetime import timedelta
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-29wspvj&(d4l!rh%t*v$fqz#s#&qco(nu^d)-_@^@v*5!o3=ed'
 
-################
+################ Edit to be able to Use Stripe Checkout
 STRIPE_SECRET_KEY = "sk_test_51QCPFGG1V6D44hOpFp3lphrFVzEcNfcFuh9OGttJVLi3rtQeiaGmtyZ9UspHTGNEckv6p4xeareDARAjCirwvq70005MnYtr2P"
-
+#STRIPE_SECRET_KEY = "Replace with YOUR_STRIPE_SECERET_KEY"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -232,16 +232,6 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
-'''
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Path to your static directory
-]
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-'''
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

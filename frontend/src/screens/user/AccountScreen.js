@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './Account.css';
 
 const AccountScreen = () => {
+  const { serverUrl } = useSelector((state) => state.app);
   const { AuthInfo } = useSelector((state) => state.auth);
   const { userInfo } = useSelector((state) => state.user);
   let [SellerProducts, setSellerProducts] = useState(null);
@@ -82,7 +83,7 @@ const AccountScreen = () => {
                           <Image
                             rounded
                             fluid
-                            src={product.image}
+                            src={serverUrl+product.image}
                             width="50px"
                             alt={product.name}
                           />
