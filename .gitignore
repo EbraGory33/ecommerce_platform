@@ -1,4 +1,4 @@
-# Python and Django
+# Backend
 env/                  # Exclude virtual environments
 *.pyc                 # Python cache files
 __pycache__/          # Python compiled bytecode
@@ -6,7 +6,7 @@ Backend/db.sqlite3    # SQLite database in Backend
 Backend/staticfiles/  # Collected static files in Backend
 Backend/migrations/   # Exclude migrations unless initial migrations are necessary
 
-# React and Node
+# Frontend
 frontend/node_modules/  # React dependencies
 /frontend/build/         # Build output of React
 npm-debug.log*           # Debug log files
@@ -18,6 +18,6 @@ yarn-error.log*
 !frontend/package.json   # Include Node dependencies
 !frontend/package-lock.json  # Include exact dependency versions
 
-# OS Generated Files
+
 .DS_Store
 
