@@ -1,4 +1,13 @@
-# Backend
+# Include Python dependencies
+!requirements.txt
+
+# Include Node dependencies
+!frontend/package.json   
+
+# Include exact dependency versions
+!frontend/package-lock.json  
+
+# Backend----------------------------------------
 
 # Exclude virtual environments
 env/
@@ -13,28 +22,28 @@ Backend/staticfiles/
 # Exclude migrations unless initial migrations are necessary
 Backend/migrations/   
 
-# Frontend
+# Frontend-----------------------------------------
 
-# React dependencies
-frontend/node_modules/
-# Build output of React
-/frontend/build/        
+# Frontend dependencies
+frontend/node_modules
+frontend/.pnp
+frontend/.pnp.js
+
+# Frontend testing
+frontend/coverage
+
+# Frontend production
+frontend/build
+
+
+# Misc
+.DS_Store
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
 # Debug log files 
-npm-debug.log*          
+npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Dependencies
-
-# Include Python dependencies
-!requirements.txt
-
-# Include Node dependencies
-!frontend/package.json   
-
-# Include exact dependency versions
-!frontend/package-lock.json  
-
-
-.DS_Store
-
