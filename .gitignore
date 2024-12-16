@@ -1,22 +1,39 @@
 # Backend
-env/                  # Exclude virtual environments
-*.pyc                 # Python cache files
-__pycache__/          # Python compiled bytecode
-Backend/db.sqlite3    # SQLite database in Backend
-Backend/staticfiles/  # Collected static files in Backend
-Backend/migrations/   # Exclude migrations unless initial migrations are necessary
+
+# Exclude virtual environments
+env/
+# Python cache files
+*.pyc
+# Python compiled bytecode
+__pycache__/
+# SQLite database in Backend
+Backend/db.sqlite3    
+# Collected static files in Backend
+Backend/staticfiles/  
+# Exclude migrations unless initial migrations are necessary
+Backend/migrations/   
 
 # Frontend
-frontend/node_modules/  # React dependencies
-/frontend/build/         # Build output of React
-npm-debug.log*           # Debug log files
+
+# React dependencies
+frontend/node_modules/
+# Build output of React
+/frontend/build/        
+# Debug log files 
+npm-debug.log*          
 yarn-debug.log*
 yarn-error.log*
 
 # Dependencies
-!requirements.txt        # Include Python dependencies
-!frontend/package.json   # Include Node dependencies
-!frontend/package-lock.json  # Include exact dependency versions
+
+# Include Python dependencies
+!requirements.txt
+
+# Include Node dependencies
+!frontend/package.json   
+
+# Include exact dependency versions
+!frontend/package-lock.json  
 
 
 .DS_Store
