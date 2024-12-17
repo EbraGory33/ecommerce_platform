@@ -20,7 +20,7 @@ Backend/db.sqlite3
 # Collected static files in Backend
 Backend/staticfiles/  
 # Exclude migrations unless initial migrations are necessary
-Backend/migrations/   
+Backend/home_app/migrations
 
 # Frontend-----------------------------------------
 
