@@ -21,7 +21,7 @@ Backend/db.sqlite3
 Backend/staticfiles/  
 # Exclude migrations unless initial migrations are necessary
 Backend/home_app/migrations/
-!Backend/home_app/migrations/0001_initial.py
+!Backend/home_app/migrations/__init__.py
 
 
 # Frontend-----------------------------------------
