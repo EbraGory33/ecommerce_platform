@@ -69,7 +69,7 @@ Ensure you have the following installed on your machine:
 2. Install Dependencies
     ```bash
     cd backend
-    python freeze > requirements.txt
+    pip install -r requirements.txt
     ```
 
 3. Set up Stripe and PostgresSQL (Optional):
