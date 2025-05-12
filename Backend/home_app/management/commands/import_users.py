@@ -17,16 +17,16 @@ class Command(BaseCommand):
         
         for user_data in users_data:
 
-            user_id = int(user_data[0]),
-            password = user_data[1],
-            is_superuser = bool(int(user_data[3])),
-            username = user_data[4],
-            last_name = user_data[5] if user_data[5] else '',
-            email = user_data[6],
-            is_staff = bool(int(user_data[7])),
-            is_active = bool(int(user_data[8])),
-            date_joined = timezone.make_aware(timezone.datetime.fromisoformat(user_data[9])) if user_data[9] != "NULL" else None,
-            first_name=user_data[10] if user_data[10] else '',
+            user_id = int(user_data[0])
+            password = user_data[1]
+            is_superuser = bool(int(user_data[3]))
+            username = user_data[4]
+            last_name = user_data[5] if user_data[5] else ''
+            email = user_data[6]
+            is_staff = bool(int(user_data[7]))
+            is_active = bool(int(user_data[8]))
+            date_joined = timezone.make_aware(timezone.datetime.fromisoformat(user_data[9])) if user_data[9] != "NULL" else None
+            first_name=user_data[10] if user_data[10] else ''
             
             # Create User instance
             user = User(
