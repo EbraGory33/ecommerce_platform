@@ -5,19 +5,23 @@ import { useFetchCategory } from '../store/slice/category/CategoryFunction';
 import { FetchUserCart } from '../store/slice/cart/CartFunction';
 import PrivateRoute from './PrivateRoute';
 import HomeScreen from '../screens/home/HomeScreen';
-import CartScreen from '../screens/cart/CartScreen';
+
+import SearchScreen from '../screens/home/SearchSceen';
+
 import ProductScreen from '../screens/home/product/ProductScreen';
 import CategoryScreen from '../screens/home/CategoryScreen';
-import LoginScreen from '../screens/user/LoginScreen';
+import OrderHistoryScreen from "../screens/home/order/OrderHistoryScreen";
+import OrderScreen from "../screens/home/order/OrderScreen";
+import CartScreen from '../screens/cart/CartScreen';
 import CheckoutScreen from '../screens/order/checkout/CheckoutScreen';
+import ShippingScreen from '../screens/order/shipping/ShippingScreen';
+import LoginScreen from '../screens/user/LoginScreen';
 import AccountScreen from '../screens/user/AccountScreen';
 import ProductEditScreen from '../screens/user/ProductEditScreen';
 import ProductCreateScreen from '../screens/user/ProductCreateScreen';
 import AccounttEditScreen from '../screens/user/AccounttEditScreen';
-import ShippingScreen from '../screens/order/shipping/ShippingScreen';
 import ReviewOrderScreen from "../screens/review/ReviewOrderScreen";
-import OrderHistoryScreen from "../screens/home/order/OrderHistoryScreen";
-import OrderScreen from "../screens/home/order/OrderScreen";
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -47,6 +51,8 @@ const AppRoutes = () => {
         <Route path="/home" element={<HomeScreen />} />
         <Route path="/cart" element={<CartScreen />} />
 
+        <Route path="/search" element={<SearchScreen />} />
+
         <Route path="/account" element={
           <PrivateRoute>
             <AccountScreen />
@@ -75,6 +81,7 @@ const AppRoutes = () => {
         <Route path="/Review_Order/:id" element={<ReviewOrderScreen />} />
         <Route path="/order_history" element={<OrderHistoryScreen />} />
         <Route path="/Order/:id" element={<OrderScreen />} />
+
       </Routes>
       {!shouldHideHeaderFooter && <Footer />}
     </>

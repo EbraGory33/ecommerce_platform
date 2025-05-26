@@ -10,4 +10,5 @@ urlpatterns = [
     path('featured_Products/', FeaturedProducts, name='featured_products'),
     path('post_review/', postReview, name='post-review'),
     path('category_products/<int:category_id>/', get_products_by_category, name='category-products'),
+    path('search/', get_products_by_search, name='search')
 ]

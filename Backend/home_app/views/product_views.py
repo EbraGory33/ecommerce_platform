@@ -109,6 +109,26 @@ def get_products_by_category(request, category_id):
     except Product.DoesNotExist:
         return Response({'error': 'Category not found or no products available'}, status=404)
 
+@api_view(['GET'])
+def get_products_by_search(request):
+    try:
+        keyword = request.GET.get('k') 
+        products = Product.objects.filter(name__icontains=keyword)
+        products_list = [
+            {
+                'id': product.id,
+                'name': product.name,
+                'description': product.description,
+                'price': product.price,
+                'stock': product.stock,
+                'image': product.image.url
+            }
+            for product in products
+        ]
+        return Response(products_list)
+    except Product.DoesNotExist:
+        return Response({'error': 'Category not found or no products available'}, status=404)
+
 
 @api_view(['GET'])
 def FeaturedProducts(request):

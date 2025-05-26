@@ -48,7 +48,7 @@ const CartScreen = () => {
                     <div className="cart-items">
                         {CartInfo.map(item => (
                             <div key={item.id} className="cart-item">
-                                <img src={`http://127.0.0.1:8000/`+item.image} alt={item.name} className="cart-item-image" />
+                                <img src={process.env.REACT_APP_API_BASE_URL+item.image} alt={item.name} className="cart-item-image" />
                                 <div className="cart-item-details">
                                     <Link to={`/product/details/${item.product_id}`} className="cart-item-name">
                                         {item.name}

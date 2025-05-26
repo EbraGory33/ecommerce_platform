@@ -32,7 +32,7 @@ STRIPE_SECRET_KEY = "sk_test_51QCPFGG1V6D44hOpFp3lphrFVzEcNfcFuh9OGttJVLi3rtQeia
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:3000']
+ALLOWED_HOSTS = ['*','localhost', '127.0.0.1', 'localhost:3000']
 
 
 

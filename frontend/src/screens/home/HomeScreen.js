@@ -4,6 +4,7 @@ import ProductCard from '../../components/ProductCards';
 import { FetchFeaturedProducts } from '../../server/endpoints/products/product_endpoints'
 import { useSelector } from "react-redux";
 import './Home.css';
+import '../../../src/index.css';
 
 const HomeScreen = () => {
     const { categoryInfo } = useSelector((state) => state.category);
@@ -32,7 +33,7 @@ const HomeScreen = () => {
         <div className="homepage">
             {/* Categories Section */}
             <aside className="sidebar">
-                <h2>Shop by Category</h2>
+                <h2 >Shop by Category</h2>
                 <div className="category-list">
                     {categoryInfo ? (
                         categoryInfo.map(category => (

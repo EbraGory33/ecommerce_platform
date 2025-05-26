@@ -21,7 +21,7 @@ function CheckoutScreen() {
     useEffect(() => {
         const totalAmount = parseInt(calculateTotal()*100);
 
-        fetch('http://127.0.0.1:8000/payment/create-payment-intent/',{
+        fetch(process.env.REACT_APP_API_BASE_URL+'/payment/create-payment-intent/',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
