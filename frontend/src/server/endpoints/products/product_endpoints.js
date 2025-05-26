@@ -11,6 +11,9 @@ export function FetchProduct(ProductId) {
 export function FetchProductsByCategory(categoryId) {
     return useAxiosClient().get(`/product/category_products/${categoryId}`)
 };
+export function FretchProductsbySearch(Keywords){
+    return useAxiosClient().get(`/product/search/${Keywords}`)
+}
 
 export function FetchFeaturedProducts(categoryId) {
     return useAxiosClient().get(`/product/featured_Products?category_id=${categoryId}`)
